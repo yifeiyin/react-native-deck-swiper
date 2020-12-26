@@ -415,7 +415,8 @@ class Swiper extends Component {
         x: x * SWIPE_MULTIPLY_FACTOR,
         y: y * SWIPE_MULTIPLY_FACTOR
       },
-      duration: this.props.swipeAnimationDuration
+      duration: this.props.swipeAnimationDuration,
+      useNativeDriver: false,
     }).start(() => {
       this.setSwipeBackCardXY(x, y, () => {
         mustDecrementCardIndex = mustDecrementCardIndex
